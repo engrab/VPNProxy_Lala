@@ -103,6 +103,7 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
+        loadInterstitial(mContext)
         return binding!!.root
     }
 
@@ -126,7 +127,7 @@ class HomeFragment : Fragment() {
             }
         }
 
-        binding!!.connectionButtonBlock.setOnClickListener {
+        binding!!.ivStart.setOnClickListener {
 
 
 
@@ -143,7 +144,7 @@ class HomeFragment : Fragment() {
             }
         }
 
-        binding!!.ivDisconnect.setOnClickListener {
+        binding!!.ivStop.setOnClickListener {
             if (vpnStart) {
 
                 confirmDisconnect()
@@ -224,11 +225,8 @@ class HomeFragment : Fragment() {
                     startVpn()
                 }
                 status("Connecting")
-                loadInterstitial(mContext)
-                val interstitial = getInterstitial()
-                if (interstitial != null){
-                    interstitial.show(mContext as Activity)
-                }
+
+                showInterstitialAd()
 
             } else {
                 mContext.toast("No Internet Connection")
@@ -370,20 +368,18 @@ class HomeFragment : Fragment() {
     }
 
     private fun onConnectionDone() {
-        binding!!.connectionTextBlock.visibility = View.GONE
-        binding!!.connectionButtonBlock.visibility = View.GONE
-        binding!!.serverSelectionBlock.visibility = View.GONE
+        binding!!.connectionTextBlock.visibility = View.VISIBLE
+        binding!!.serverSelectionBlock.visibility = View.INVISIBLE
 
         binding!!.afterConnectionDetailBlock.visibility = View.VISIBLE
-        binding!!.ivDisconnect.visibility = View.VISIBLE
+        binding!!.ivStop.visibility = View.VISIBLE
     }
 
     private fun onDisconnectDone() {
         binding!!.connectionTextBlock.visibility = View.VISIBLE
-        binding!!.connectionButtonBlock.visibility = View.VISIBLE
         binding!!.serverSelectionBlock.visibility = View.VISIBLE
-        binding!!.afterConnectionDetailBlock.visibility = View.GONE
-        binding!!.ivDisconnect.visibility = View.GONE
+        binding!!.afterConnectionDetailBlock.visibility = View.INVISIBLE
+        binding!!.ivStop.visibility = View.GONE
     }
 
     private fun loadInterstitialAd() {

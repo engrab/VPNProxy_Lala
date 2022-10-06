@@ -21,5 +21,6 @@
     <!--App Main Colors-->
     <color name="colorDarkGray">#1c1c1c</color>
     <color name="colorLightGray">#434645</color>
+    <color name="orange">#f04f32</color>
 
 </resources>

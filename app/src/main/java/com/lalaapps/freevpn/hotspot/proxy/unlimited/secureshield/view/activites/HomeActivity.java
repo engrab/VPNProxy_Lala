@@ -46,34 +46,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 .commit();
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.menu_premium, menu);
-//
-//        // return true so that the menu pop up is opened
-//        return true;
-//    }
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch(item.getItemId())
-//        {
-//            case R.id.navPremium:
-//                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//                builder.setTitle("Premium");
-//                builder.setMessage("This features is available soon...");
-//                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        dialog.dismiss();
-//                    }
-//                });
-//                AlertDialog alertDialog = builder.create();
-//                alertDialog.show();
-//                break;
-//        }
-//        return true;
-//    }
 
     @Override
     public void onBackPressed() {
@@ -120,7 +92,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.action_share:
 
                 try {
-                    String text = "Download VPN to set as home and lock screen\n https://play.google.com/store/apps/details?id=" + getPackageName();
+                    String text = "Download VPN to connected other server\n https://play.google.com/store/apps/details?id=" + getPackageName();
                     Intent txtIntent = new Intent(android.content.Intent.ACTION_SEND);
                     txtIntent.setType("text/plain");
                     txtIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "VPN");

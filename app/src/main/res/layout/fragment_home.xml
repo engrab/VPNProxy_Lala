@@ -5,54 +5,15 @@
     android:layout_height="match_parent"
     android:background="@drawable/ic_bg">
 
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/connection_button_details_block"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/connection_text_block"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/connection_button_block"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:focusable="true"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:src="@drawable/ic_start"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/connection_text_block"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/server_selection_block"
+        app:layout_constraintBottom_toTopOf="@+id/clStartStop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/connection_button_details_block">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/connection_text_dummy"
@@ -81,13 +42,111 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clStartStop"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/after_connection_detail_block"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connection_text_block">
+
+
+        <ImageView
+            android:id="@+id/ivStart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivStop"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_disconnect"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/after_connection_detail_block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/clStartStop"
+        app:layout_constraintBottom_toTopOf="@+id/server_selection_block"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/after_connection_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_your_ip_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/vpn_connection_time"
+            app:layout_constraintEnd_toStartOf="@id/connection_ip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/connection_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/dummy_ip_text"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/after_connection_text2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/after_connection_text2" />
+
+
+        <TextView
+            android:id="@+id/vpn_connection_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="12dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="4dp"
+            android:padding="5dp"
+            android:textSize="18sp"
+            android:background="@drawable/ic_time_back"
+            android:text="@string/dummy_time_text"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/connection_ip" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/server_selection_block"
         style="@style/drawer_card"
         android:elevation="2dp"
         app:layout_constraintBottom_toTopOf="@+id/connection_detail_block"
+        app:layout_constraintTop_toBottomOf="@+id/after_connection_detail_block"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/connection_text_block">
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/server_flag_image"
@@ -143,121 +202,20 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/after_connection_detail_block"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:clickable="true"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@id/ivDisconnect"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:id="@+id/llConnection"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/after_connection_image1"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:tint="@color/white"
-                android:src="@drawable/ic_baseline_safety_check_24"
-                 />
-
-            <TextView
-                android:id="@+id/after_connection_text1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="@string/you_are_connected_text"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                />
-
-        </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/after_connection_text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dummy_your_ip_text"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/vpn_connection_time"
-            app:layout_constraintEnd_toStartOf="@id/connection_ip"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/llConnection" />
-
-        <TextView
-            android:id="@+id/connection_ip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="@string/dummy_ip_text"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/after_connection_text2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/after_connection_text2" />
-
-
-        <TextView
-            android:id="@+id/vpn_connection_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingStart="12dp"
-            android:paddingTop="4dp"
-            android:paddingEnd="12dp"
-            android:paddingBottom="4dp"
-            android:text="@string/dummy_time_text"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/connection_ip" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/ivDisconnect"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/ic_disconnect"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-    </ImageView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/connection_detail_block"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/size_20"
         android:background="@drawable/main_back"
         android:clickable="true"
         android:padding="20dp"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/upload_block"
@@ -271,8 +229,8 @@
                 android:id="@+id/upload_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:tint="@color/white"
                 android:src="@drawable/ic_baseline_arrow_circle_up_24"
+                android:tint="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/upload_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -295,14 +253,12 @@
             android:id="@+id/upload_speed"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/size_6"
-            android:layout_marginEnd="@dimen/size_18"
             android:gravity="center"
             android:maxLines="1"
-            android:textColor="@color/white"
             android:singleLine="true"
             android:text="@string/zero_text"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toStartOf="@id/up_down_divider"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/upload_block" />
@@ -331,8 +287,8 @@
                 android:id="@+id/download_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:tint="@color/white"
                 android:src="@drawable/ic_baseline_arrow_circle_down_24"
+                android:tint="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/download_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -355,14 +311,12 @@
             android:id="@+id/download_speed"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/size_18"
-            android:layout_marginEnd="@dimen/size_6"
             android:gravity="center_horizontal"
             android:maxLines="1"
             android:singleLine="true"
-            android:textColor="@color/white"
             android:text="@string/zero_text"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/up_down_divider"
             app:layout_constraintTop_toBottomOf="@+id/download_detail_block" />
@@ -370,17 +324,17 @@
         <LinearLayout
             android:id="@+id/llAds"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:minHeight="60dp"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/up_down_divider" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

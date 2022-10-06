@@ -60,6 +60,7 @@ public class ChangeServerActivity extends AppCompatActivity {
     private ServerAdapter adapter;
     private DbHelper dbHelper;
     private SharedPreference sharedPreference;
+    private Dialog infoAlertDialog;
 
     //ads
     private com.google.android.gms.ads.interstitial.InterstitialAd admobInterstitialAd;
@@ -81,12 +82,12 @@ public class ChangeServerActivity extends AppCompatActivity {
 
                 sharedPreference.saveServer(selectedServerModel);
                 globalServerModel = selectedServerModel;
-                setIntentResult(selectedServerModel);
                 showInterstitialAd();
+                setIntentResult(selectedServerModel);
 
 
             };
-    private Dialog infoAlertDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,13 +126,14 @@ public class ChangeServerActivity extends AppCompatActivity {
         });
 
         loadBanner();
+        loadInterstitialAd();
 
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        loadInterstitialAd();
+
     }
 
     @Override
