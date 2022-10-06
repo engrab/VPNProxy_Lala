@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.apptopstudio.freevpn.hotspot.proxy.unlimited.secureshield" , appContext.getPackageName());
+        assertEquals("com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield" , appContext.getPackageName());
     }
 }

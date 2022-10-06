@@ -2,7 +2,7 @@ package com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.utils;
 
 import android.util.Base64;
 
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.model.Server;
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.pojoClasses.ServerModel;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,36 +34,36 @@ public class CsvParser {
     private static final int PORT_INDEX = 2;
     private static final int PROTOCOL_INDEX = 1;
 
-    public static Server stringToServer(String line) {
+    public static ServerModel stringToServer(String line) {
         String[] vpn = line.split(",");
 
-        Server server = new Server();
-        server.hostName = vpn[HOST_NAME];
-        server.ipAddress = vpn[IP_ADDRESS];
-        server.score = Integer.parseInt(vpn[SCORE]);
-        server.ping = vpn[PING];
-        server.speed = Long.parseLong(vpn[SPEED]);
-        server.countryLong = vpn[COUNTRY_LONG];
-        server.countryShort = vpn[COUNTRY_SHORT];
-        server.vpnSessions = Long.parseLong(vpn[VPN_SESSION]);
-        server.uptime = Long.parseLong(vpn[UPTIME]);
-        server.totalUsers = Long.parseLong(vpn[TOTAL_USERS]);
-        server.totalTraffic = vpn[TOTAL_TRAFFIC];
-        server.logType = vpn[LOG_TYPE];
-        server.operator = vpn[OPERATOR];
-        server.message = vpn[MESSAGE];
-        server.ovpnConfigData = new String(Base64.decode(
+        ServerModel serverModel = new ServerModel();
+        serverModel.hostName = vpn[HOST_NAME];
+        serverModel.ipAddress = vpn[IP_ADDRESS];
+        serverModel.score = Integer.parseInt(vpn[SCORE]);
+        serverModel.ping = vpn[PING];
+        serverModel.speed = Long.parseLong(vpn[SPEED]);
+        serverModel.countryLong = vpn[COUNTRY_LONG];
+        serverModel.countryShort = vpn[COUNTRY_SHORT];
+        serverModel.vpnSessions = Long.parseLong(vpn[VPN_SESSION]);
+        serverModel.uptime = Long.parseLong(vpn[UPTIME]);
+        serverModel.totalUsers = Long.parseLong(vpn[TOTAL_USERS]);
+        serverModel.totalTraffic = vpn[TOTAL_TRAFFIC];
+        serverModel.logType = vpn[LOG_TYPE];
+        serverModel.operator = vpn[OPERATOR];
+        serverModel.message = vpn[MESSAGE];
+        serverModel.ovpnConfigData = new String(Base64.decode(
                 vpn[OVPN_CONFIG_DATA], Base64.DEFAULT));
 
-        String[] lines = server.ovpnConfigData.split("[\\r\\n]+");
-        server.port = getPort(lines);
-        server.protocol = getProtocol(lines);
+        String[] lines = serverModel.ovpnConfigData.split("[\\r\\n]+");
+        serverModel.port = getPort(lines);
+        serverModel.protocol = getProtocol(lines);
 
-        return server;
+        return serverModel;
     }
 
-    public static List<Server> parse(Response response) {
-        List<Server> servers = new ArrayList<>();
+    public static List<ServerModel> parse(Response response) {
+        List<ServerModel> serverModels = new ArrayList<>();
         InputStream in = null;
         BufferedReader reader = null;
 
@@ -74,7 +74,7 @@ public class CsvParser {
             String line;
             while ((line = reader.readLine()) != null) {
                 if (!line.startsWith("*") && !line.startsWith("#")) {
-                    servers.add(stringToServer(line));
+                    serverModels.add(stringToServer(line));
                 }
             }
 
@@ -89,7 +89,7 @@ public class CsvParser {
             }
         }
 
-        return servers;
+        return serverModels;
     }
 
     /**

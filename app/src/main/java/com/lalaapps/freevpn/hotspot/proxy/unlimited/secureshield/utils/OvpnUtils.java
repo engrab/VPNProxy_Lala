@@ -8,14 +8,11 @@ import android.os.Environment;
 
 import androidx.annotation.NonNull;
 
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.model.Server;
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.pojoClasses.ServerModel;
 
 import java.io.File;
 import java.io.FileOutputStream;
 
-/**
- * Created by Jhon Kenneth Carino on 10/18/15.
- */
 public class OvpnUtils {
 
     private static final String FILE_EXTENSION = ".ovpn";
@@ -35,16 +32,16 @@ public class OvpnUtils {
      * Writes and saves OVPN profile to a file
      *
      * @param context The context of an application
-     * @param server The {@link Server} that contains OVPN profile
+     * @param serverModel The {@link ServerModel} that contains OVPN profile
      */
-    private static void saveConfigData(@NonNull Context context, @NonNull Server server) {
+    private static void saveConfigData(@NonNull Context context, @NonNull ServerModel serverModel) {
         File file;
         FileOutputStream outputStream;
 
         try {
-            file = getFile(context, server);
+            file = getFile(context, serverModel);
             outputStream = new FileOutputStream(file);
-            outputStream.write(server.ovpnConfigData.getBytes("UTF-8"));
+            outputStream.write(serverModel.ovpnConfigData.getBytes("UTF-8"));
             outputStream.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -55,17 +52,17 @@ public class OvpnUtils {
      * Creates an empty file for OVPN profile
      *
      * @param context The context of an application
-     * @param server The {@link Server} that contains OVPN profile
+     * @param serverModel The {@link ServerModel} that contains OVPN profile
      */
-    private static File getFile(@NonNull Context context, @NonNull Server server) {
+    private static File getFile(@NonNull Context context, @NonNull ServerModel serverModel) {
         File filePath;
         if (!Environment.isExternalStorageRemovable() || isExternalStorageWritable()) {
             filePath = context.getExternalCacheDir();
         } else {
             filePath = context.getCacheDir();
         }
-        return new File(filePath, server.countryShort + "_" + server.hostName + "_" +
-                server.protocol.toUpperCase() + FILE_EXTENSION);
+        return new File(filePath, serverModel.countryShort + "_" + serverModel.hostName + "_" +
+                serverModel.protocol.toUpperCase() + FILE_EXTENSION);
     }
 
     /**
@@ -85,17 +82,17 @@ public class OvpnUtils {
      * Shows an intent chooser to share OVPN profile.
      *
      * @param activity The context of an activity
-     * @param server The {@link Server} that contains OVPN profile
+     * @param serverModel The {@link ServerModel} that contains OVPN profile
      */
-    public static void shareOvpnFile(@NonNull Activity activity, @NonNull Server server) {
-        File file = getFile(activity, server);
+    public static void shareOvpnFile(@NonNull Activity activity, @NonNull ServerModel serverModel) {
+        File file = getFile(activity, serverModel);
         if (!file.exists()) {
-            saveConfigData(activity, server);
+            saveConfigData(activity, serverModel);
         }
 
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("*/*");
-        intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(getFile(activity, server)));
+        intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(getFile(activity, serverModel)));
         activity.startActivity(Intent.createChooser(intent, "Share Profile using"));
     }
 }

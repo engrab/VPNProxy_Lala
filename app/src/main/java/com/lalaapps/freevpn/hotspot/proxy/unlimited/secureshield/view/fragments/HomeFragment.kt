@@ -16,15 +16,15 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.AppSettings
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.CheckInternetConnection
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.utils.AppSettings
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.utils.CheckInternetConnection
 import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.R
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.SharedPreference
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.ads.AdmobAdsUtils
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.ads.AdmobAdsUtils.getInterstitial
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.ads.AdmobAdsUtils.loadInterstitial
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.pref.SharedPreference
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.ads.AdsUtils
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.ads.AdsUtils.getInterstitial
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.ads.AdsUtils.loadInterstitial
 import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.databinding.FragmentHomeBinding
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.model.Server
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.pojoClasses.ServerModel
 import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.utils.toast
 import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.view.activites.ChangeServerActivity
 import com.google.android.gms.ads.AdRequest
@@ -46,7 +46,7 @@ class HomeFragment : Fragment() {
     private var connection: CheckInternetConnection? = null
     private var vpnStart = false
 
-    private lateinit var globalServer: Server
+    private lateinit var globalServerModel: ServerModel
     private lateinit var vpnThread: OpenVPNThread
     private lateinit var vpnService: OpenVPNService
     private lateinit var sharedPreference: SharedPreference
@@ -58,14 +58,14 @@ class HomeFragment : Fragment() {
     private val getServerResult =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
-                val selectedServer = result.data!!.getParcelableExtra<Server>("serverextra")
-                globalServer = selectedServer!!
+                val selectedServerModel = result.data!!.getParcelableExtra<ServerModel>("serverextra")
+                globalServerModel = selectedServerModel!!
 
                 //update selected server
-                binding!!.serverFlagName.text = selectedServer.getCountryLong()
-                binding!!.serverFlagDes.text = selectedServer.getIpAddress()
+                binding!!.serverFlagName.text = selectedServerModel.getCountryLong()
+                binding!!.serverFlagDes.text = selectedServerModel.getIpAddress()
 
-                binding!!.connectionIp.text = selectedServer.getIpAddress()
+                binding!!.connectionIp.text = selectedServerModel.getIpAddress()
                 isServerSelected = true
             }
         }
@@ -89,8 +89,12 @@ class HomeFragment : Fragment() {
         super.onCreate(savedInstanceState)
         vpnThread = OpenVPNThread()
         vpnService = OpenVPNService()
-        connection = CheckInternetConnection()
-        sharedPreference = SharedPreference(mContext)
+        connection =
+            CheckInternetConnection()
+        sharedPreference =
+            SharedPreference(
+                mContext
+            )
     }
 
     override fun onCreateView(
@@ -110,7 +114,7 @@ class HomeFragment : Fragment() {
         VpnStatus.initLogCache(mContext.cacheDir)
 
 
-        AdmobAdsUtils.showBannerSmall(mContext, binding!!.llAds)
+        AdsUtils.showBannerSmall(mContext, binding!!.llAds)
 
         binding!!.serverSelectionBlock.setOnClickListener {
             if (!vpnStart) {
@@ -162,7 +166,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun getInternetStatus(): Boolean {
-        return connection!!.netCheck(mContext)
+        return connection!!.isInternetConnected(mContext)
     }
 
     fun setStatus(connectionState: String?) {
@@ -267,8 +271,8 @@ class HomeFragment : Fragment() {
 
     private fun startVpn() {
         try {
-            val conf = globalServer.getOvpnConfigData()
-            OpenVpnApi.startVpn(context, conf, globalServer.getCountryShort(), "vpn", "vpn")
+            val conf = globalServerModel.getOvpnConfigData()
+            OpenVpnApi.startVpn(context, conf, globalServerModel.getCountryShort(), "vpn", "vpn")
             binding!!.connectionTextStatus.text = "Connecting..."
             vpnStart = true
         } catch (exception: IOException) {
@@ -328,14 +332,14 @@ class HomeFragment : Fragment() {
         LocalBroadcastManager.getInstance(mContext).registerReceiver(
             broadcastReceiver!!, IntentFilter("connectionState")
         )
-        if (!this::globalServer.isInitialized) {
+        if (!this::globalServerModel.isInitialized) {
             if (sharedPreference.isPrefsHasServer) {
-                globalServer = sharedPreference.server
+                globalServerModel = sharedPreference.server
                 //update selected server
-                binding!!.serverFlagName.text = globalServer.getCountryLong()
-                binding!!.serverFlagDes.text = globalServer.getIpAddress()
+                binding!!.serverFlagName.text = globalServerModel.getCountryLong()
+                binding!!.serverFlagDes.text = globalServerModel.getIpAddress()
 
-                binding!!.connectionIp.text = globalServer.getIpAddress()
+                binding!!.connectionIp.text = globalServerModel.getIpAddress()
                 isServerSelected = true
 
             } else {
@@ -359,8 +363,8 @@ class HomeFragment : Fragment() {
      * Save current selected server on local shared preference
      */
     override fun onStop() {
-        if (this::globalServer.isInitialized) {
-            sharedPreference.saveServer(globalServer)
+        if (this::globalServerModel.isInitialized) {
+            sharedPreference.saveServer(globalServerModel)
         }
         super.onStop()
     }

@@ -1,30 +1,33 @@
 package com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.view.activites;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.AppSettings;
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.BuildConfig;
+import com.badoo.mobile.util.BuildConfig;
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.utils.AppSettings;
 import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.R;
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.SharedPreference;
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.adapter.ServerAdapter;
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.ads.AdmobAdsUtils;
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.pref.SharedPreference;
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.ads.AdsUtils;
 import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.databinding.ActivityChangeServerBinding;
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.db.DbHelper;
-import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.model.Server;
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.database.DbHelper;
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.pojoClasses.ServerModel;
 import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.utils.CsvParser;
 import com.badoo.mobile.util.WeakHandler;
 import com.google.android.gms.ads.AdRequest;
@@ -32,6 +35,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+import com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.utils.OvpnUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -46,7 +50,7 @@ import okhttp3.Response;
 public class ChangeServerActivity extends AppCompatActivity {
 
     private final OkHttpClient okHttpClient = new OkHttpClient();
-    private final List<Server> servers = new ArrayList<>();
+    private final List<ServerModel> serverModels = new ArrayList<>();
     AdView adView;
     //TODO: About License
     private ActivityChangeServerBinding binding;
@@ -59,10 +63,10 @@ public class ChangeServerActivity extends AppCompatActivity {
 
     //ads
     private com.google.android.gms.ads.interstitial.InterstitialAd admobInterstitialAd;
-    private Server globalServer;
+    private ServerModel globalServerModel;
     private final ServerAdapter.ServerClickCallback serverClickCallback =
             server -> {
-                Server selectedServer = new Server(
+                ServerModel selectedServerModel = new ServerModel(
                         server.hostName,
                         server.ipAddress,
                         server.ping,
@@ -75,9 +79,9 @@ public class ChangeServerActivity extends AppCompatActivity {
                 );
 
 
-                sharedPreference.saveServer(selectedServer);
-                globalServer = selectedServer;
-                setIntentResult(selectedServer);
+                sharedPreference.saveServer(selectedServerModel);
+                globalServerModel = selectedServerModel;
+                setIntentResult(selectedServerModel);
                 showInterstitialAd();
 
 
@@ -94,19 +98,19 @@ public class ChangeServerActivity extends AppCompatActivity {
         binding = ActivityChangeServerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        AdmobAdsUtils.loadInterstitial(this);
+        AdsUtils.loadInterstitial(this);
 
-        servers.addAll(dbHelper.getAll());
+        serverModels.addAll(dbHelper.getAll());
         setupSwipeRefreshLayout();
         setupRecyclerView();
 
         if (request == null) {
             request = new Request.Builder()
-                    .url(BuildConfig.VPN_GATE_API)
+                    .url(getResources().getString(R.string.VPN_GATE_API))
                     .build();
         }
 
-        if (servers.isEmpty()) {
+        if (serverModels.isEmpty()) {
             populateServerList();
         }
 
@@ -162,7 +166,7 @@ public class ChangeServerActivity extends AppCompatActivity {
     }
 
     private void setupRecyclerView() {
-        adapter = new ServerAdapter(servers, serverClickCallback);
+        adapter = new ServerAdapter(serverModels, serverClickCallback);
         RecyclerView.ItemDecoration itemDecoration = new
                 DividerItemDecoration(ChangeServerActivity.this, 0);
         binding.recyclerview.setHasFixedSize(true);
@@ -171,9 +175,9 @@ public class ChangeServerActivity extends AppCompatActivity {
         binding.recyclerview.setAdapter(adapter);
     }
 
-    private void loadServerList(List<Server> serverList) {
-        adapter.setServerList(serverList);
-        dbHelper.save(serverList);
+    private void loadServerList(List<ServerModel> serverModelList) {
+        adapter.setServerList(serverModelList);
+        dbHelper.save(serverModelList);
     }
 
     /**
@@ -199,12 +203,12 @@ public class ChangeServerActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
-                    final List<Server> servers = CsvParser.parse(response);
+                    final List<ServerModel> serverModels = CsvParser.parse(response);
 
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
-                            loadServerList(servers);
+                            loadServerList(serverModels);
                             binding.swipeRefresh.setRefreshing(false);
                             binding.recyclerview.setVisibility(View.VISIBLE);
                         }
@@ -232,7 +236,7 @@ public class ChangeServerActivity extends AppCompatActivity {
     private void loadAdmobBanner() {
 
 
-        adView = AdmobAdsUtils.showBannerSmall(this, binding.changeServerBannerAdmob);
+        adView = AdsUtils.showBannerSmall(this, binding.changeServerBannerAdmob);
 
     }
 
@@ -258,7 +262,7 @@ public class ChangeServerActivity extends AppCompatActivity {
                                     @Override
                                     public void onAdDismissedFullScreenContent() {
                                         super.onAdDismissedFullScreenContent();
-                                        setIntentResult(globalServer);
+                                        setIntentResult(globalServerModel);
                                     }
 
                                     @Override
@@ -299,9 +303,9 @@ public class ChangeServerActivity extends AppCompatActivity {
         }
     }
 
-    private void setIntentResult(Server server) {
+    private void setIntentResult(ServerModel serverModel) {
         Intent resultIntent = new Intent();
-        resultIntent.putExtra("serverextra", server);
+        resultIntent.putExtra("serverextra", serverModel);
         setResult(RESULT_OK, resultIntent);
         finish();
     }
@@ -330,5 +334,130 @@ public class ChangeServerActivity extends AppCompatActivity {
         infoAlertDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
 
         infoAlertDialog.show();
+    }
+
+
+    public static class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder> {
+
+        /*
+        * Set the server the data
+        * */
+        private List<ServerModel> serverModels = new ArrayList<>();
+
+        private ServerClickCallback callback;
+
+        public ServerAdapter(List<ServerModel> serverModels, @NonNull ServerClickCallback callback) {
+            this.serverModels.clear();
+            this.serverModels.addAll(serverModels);
+            this.callback = callback;
+        }
+
+        public void setServerList(@NonNull final List<ServerModel> serverModelList) {
+            if (serverModels.isEmpty()) {
+                serverModels.clear();
+                serverModels.addAll(serverModelList);
+                notifyItemRangeInserted(0, serverModelList.size());
+            } else {
+                DiffUtil.DiffResult result = DiffUtil.calculateDiff(new DiffUtil.Callback() {
+                    @Override
+                    public int getOldListSize() {
+                        return serverModels.size();
+                    }
+
+                    @Override
+                    public int getNewListSize() {
+                        return serverModelList.size();
+                    }
+
+                    @Override
+                    public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
+                        ServerModel old = serverModels.get(oldItemPosition);
+                        ServerModel serverModel = serverModelList.get(newItemPosition);
+                        return old.hostName.equals(serverModel.hostName);
+                    }
+
+                    @Override
+                    public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
+                        ServerModel old = serverModels.get(oldItemPosition);
+                        ServerModel serverModel = serverModelList.get(newItemPosition);
+                        return old.hostName.equals(serverModel.hostName)
+                                && old.ipAddress.equals(serverModel.ipAddress)
+                                && old.countryLong.equals(serverModel.countryLong);
+                    }
+                });
+                serverModels.clear();
+                serverModels.addAll(serverModelList);
+                result.dispatchUpdatesTo(this);
+            }
+        }
+
+        @Override
+        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.server_list_item, parent, false);
+            return new ViewHolder(view, callback);
+        }
+
+        @Override
+        public void onBindViewHolder(ViewHolder holder, int position) {
+            holder.bind(serverModels.get(position));
+
+
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public int getItemCount() {
+            return serverModels == null ? 0 : serverModels.size();
+        }
+
+        static class ViewHolder extends RecyclerView.ViewHolder {
+            final View rootView;
+            final TextView countryView;
+            final TextView protocolView;
+            final TextView ipAddressView;
+            final TextView speedView;
+            final TextView pingView;
+
+            final ServerClickCallback callback;
+
+            public ViewHolder(View view, ServerClickCallback callback) {
+                super(view);
+                rootView = view;
+                countryView = view.findViewById(R.id.tv_country_name);
+                protocolView = view.findViewById(R.id.tv_protocol);
+                ipAddressView = view.findViewById(R.id.tv_ip_address);
+                speedView = view.findViewById(R.id.tv_speed);
+                pingView = view.findViewById(R.id.tv_ping);
+
+                this.callback = callback;
+            }
+
+            public void bind(@NonNull final ServerModel serverModel) {
+                final Context context = rootView.getContext();
+
+                countryView.setText(serverModel.countryLong);
+                protocolView.setText(serverModel.protocol.toUpperCase());
+                ipAddressView.setText(context.getString(R.string.format_ip_address,
+                        serverModel.ipAddress, serverModel.port));
+                speedView.setText(context.getString(R.string.format_speed,
+                        OvpnUtils.humanReadableCount(serverModel.speed, true)));
+                pingView.setText(context.getString(R.string.format_ping, serverModel.ping));
+                rootView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        callback.onItemClick(serverModel);
+                    }
+                });
+            }
+        }
+
+        public interface ServerClickCallback {
+            void onItemClick(@NonNull ServerModel serverModel);
+        }
     }
 }

@@ -11,13 +11,118 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75e4c8b6-db50-4ba4-a9e1-2fb0ebe8a118" name="Changes" comment="initial commit" />
+    <list default="true" id="75e4c8b6-db50-4ba4-a9e1-2fb0ebe8a118" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/japan.ovpn" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/japan.ovpn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/korea.ovpn" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/korea.ovpn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/sweden.ovpn" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/sweden.ovpn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/us.ovpn" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/us.ovpn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/AppSettings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/utils/AppSettings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/CheckInternetConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/utils/CheckInternetConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/SharedPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/pref/SharedPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/adapter/ServerAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/ads/AdmobAdsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/ads/AdsUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/ads/AdmobAppOpenAdsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/ads/AdsOpenUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/db/DbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/database/DbHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/db/ServerContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/database/ServerConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/db/ServerDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/database/ServerDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/model/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/pojoClasses/ServerModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/utils/CsvParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/utils/CsvParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/utils/OvpnUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/utils/OvpnUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/utils/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/ChangeServerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/ChangeServerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/ExitActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/QuitActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/HomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/PrivacyPolicyActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/PrivacyActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/SplashActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/SplashActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/fragments/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/fragments/HomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/widget/EmptyRecyclerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/recycle/EmptyRecyclerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_download_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_drawer_premium_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_drawer_rating_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_rate_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_remove_ads_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-ldpi/ic_download_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-ldpi/ic_drawer_premium_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-ldpi/ic_drawer_rating_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-ldpi/ic_rate_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-ldpi/ic_remove_ads_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-ldpi/ic_upload_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_download_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_drawer_premium_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_drawer_rating_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_rate_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_remove_ads_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_upload_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_download_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_drawer_premium_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_drawer_rating_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_rate_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_remove_ads_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_upload_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_download_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_drawer_premium_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_drawer_rating_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_rate_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_remove_ads_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_upload_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_download_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_drawer_premium_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_drawer_rating_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_rate_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_remove_ads_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_upload_icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background_submit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/connection_time_bg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/country_selection_back.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/dialog_circle_bg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/disconnect_vpn_bg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/empty_circle_subscription.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_download_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_more_vert_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_privacy_tip_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_privacy_tip_24.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_workspace_premium_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_check_circle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_inapp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_camera.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_gallery.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_slideshow.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/main_back.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/main_back.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/server_selection_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/server_selection_bg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/side_nav_bar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/subscription_card_bg_dark.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_change_server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_change_server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_exit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_quit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_privacy_policy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_privacy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_about.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_feedback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/info_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/info_dialog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_premium.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vpnLib/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vpnLib/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/ayliya/.android/avd/Pixel_4_API_25.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/ayliya/.android/avd/Pixel_4_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -90,10 +195,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="android-custom-view/home/ayliya/Android/Projects/lala/VPN/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/widget/EmptyRecyclerView.java_SELECTED" value="EmptyRecyclerView" />
     <property name="android-custom-view/home/ayliya/Android/Projects/shahzad/LibertyVPN-Source Code/app/src/main/java/com/apptopstudio/freevpn/hotspot/proxy/unlimited/secureshield/widget/EmptyRecyclerView.java_SELECTED" value="EmptyRecyclerView" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Test/Video to Audio Converter" />
     <property name="project.structure.last.edited" value="Suggestions" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -117,7 +223,12 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.utils" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.pref" />
+      <recent name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.utils" />
       <recent name="com.apptopstudio.freevpn.hotspot.proxy.unlimited.secureshield.view.activites" />
     </key>
     <key name="android.template.1173125979">

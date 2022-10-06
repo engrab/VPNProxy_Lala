@@ -169,7 +169,8 @@
                 android:id="@+id/after_connection_image1"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/ic_protection_icon"
+                android:tint="@color/white"
+                android:src="@drawable/ic_baseline_safety_check_24"
                  />
 
             <TextView
@@ -270,7 +271,8 @@
                 android:id="@+id/upload_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_upload_icon"
+                android:tint="@color/white"
+                android:src="@drawable/ic_baseline_arrow_circle_up_24"
                 app:layout_constraintEnd_toStartOf="@+id/upload_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -309,7 +311,7 @@
             android:id="@+id/up_down_divider"
             android:layout_width="2dp"
             android:layout_height="0dp"
-            android:background="@color/colorPrimary"
+            android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="@id/download_speed"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -329,7 +331,8 @@
                 android:id="@+id/download_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_download_icon"
+                android:tint="@color/white"
+                android:src="@drawable/ic_baseline_arrow_circle_down_24"
                 app:layout_constraintEnd_toStartOf="@+id/download_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

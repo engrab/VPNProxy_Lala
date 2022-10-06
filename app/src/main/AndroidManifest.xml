@@ -19,32 +19,27 @@
         android:theme="@style/AppTheme"
         tools:replace="android:extractNativeLibs">
         <activity
-            android:name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.view.activites.ExitActivity"
+            android:name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.view.activites.QuitActivity"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+
         </activity>
         <activity
-            android:name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.view.activites.PrivacyPolicyActivity"
+            android:name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.view.activites.PrivacyActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+
         </activity>
         <activity
-            android:name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.view.activites.MainActivity"
+            android:name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.view.activites.HomeActivity"
             android:exported="false"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+
         </activity>
         <activity
             android:name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.view.activites.SplashActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

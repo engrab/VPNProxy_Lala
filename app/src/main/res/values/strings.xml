@@ -19,7 +19,7 @@
 
 
     <string name="app_version_text" translatable="false">Version 1.0.0</string>
-    <string name="about_app_text" translatable="false">You are using VPN Proxy build v1.0.0, Enjoy unlimited bandwidth with stable connection and a lot of servers to choose from. No limits, No restrictions</string>
+    <string name="about_app_text" translatable="false">You are using VPN Proxy build v1.0.0, Enjoy unlimited bandwidth with stable connection and a lot of serverModels to choose from. No limits, No restrictions</string>
 
     <string name="app_name_premium">VPN Proxy Premium</string>
     <string name="privacy_policy_title" translatable="false">Privacy Policy</string>
@@ -85,8 +85,8 @@
         <item>How to use VPN Proxy ?</item>
         <item>How to disconnect VPN Proxy ?</item>
         <item>Can\’t connect, not stable or speed is slow.</item>
-        <item>How to switch server location?</item>
-        <item>Can\’t find the server you want?</item>
+        <item>How to switch serverModel location?</item>
+        <item>Can\’t find the serverModel you want?</item>
         <item>Why can\'t I use Internet after connection established?</item>
         <item>How to disable battery optimization for VPN Proxy?</item>
         <item>How to cancel the subscription in Google play?</item>
@@ -94,12 +94,12 @@
     </string-array>
 
 
-    <string name="disconnect_first">In order to change the server, please disconnect the VPN first</string>
-    <string name="share_app_text" translatable="false">Check this awesome free VPN. You can unblock any website and enjoy tons of free server, Download now VPN Proxy</string>
-    <string name="share_msg" translatable="false">Check this awesome free VPN. You can unblock any website and enjoy tons of free server, Download now VPN Proxy</string>
+    <string name="disconnect_first">In order to change the serverModel, please disconnect the VPN first</string>
+    <string name="share_app_text" translatable="false">Check this awesome free VPN. You can unblock any website and enjoy tons of free serverModel, Download now VPN Proxy</string>
+    <string name="share_msg" translatable="false">Check this awesome free VPN. You can unblock any website and enjoy tons of free serverModel, Download now VPN Proxy</string>
 
     <string name="info_dialog_title">Credits</string>
-    <string name="info_dialog_details">All of these servers are being provided by the VPN gate project and they are offering their service free of charge. You can read more about the VPN gate project at <a href="https://www.vpngate.net/en/">https://www.vpngate.net/en/</a></string>
+    <string name="info_dialog_details">All of these serverModels are being provided by the VPN gate project and they are offering their service free of charge. You can read more about the VPN gate project at <a href="https://www.vpngate.net/en/">https://www.vpngate.net/en/</a></string>
 
 
     <!--facebook ids-->

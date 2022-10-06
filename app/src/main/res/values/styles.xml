@@ -18,7 +18,7 @@
         <item name="android:layout_marginLeft">20dp</item>
         <item name="android:layout_marginEnd">20dp</item>
         <item name="android:layout_marginRight">20dp</item>
-        <item name="android:background">@drawable/subscription_card_bg_light</item>
+        <item name="android:background">@drawable/rectangle_shape</item>
         <item name="android:padding">12dp</item>
     </style>
 
@@ -57,4 +57,12 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    </style>
 </resources>
