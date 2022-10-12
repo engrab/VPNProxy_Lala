@@ -1,2 +1,2 @@
 include ':app', ':vpnLib'
-rootProject.name='VPN Proxy Lala'
+rootProject.name='Fastest and Secure VPN Proxy'

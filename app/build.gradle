@@ -4,7 +4,7 @@ apply plugin: 'org.jetbrains.kotlin.android'
 android {
     compileSdkVersion 31
     defaultConfig {
-        applicationId 'com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield'
+        applicationId 'com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection'
         minSdkVersion 21
         targetSdkVersion 31
         versionCode 1
@@ -26,10 +26,10 @@ android {
         }
         release {
             resValue 'string', 'VPN_GATE_API', '"http://www.vpngate.net/api/iphone/"'
-            resValue 'string', 'app_id', '"ca-app-pub-3940256099942544~3347511713"'
-            resValue 'string', 'app_open', '"ca-app-pub-3940256099942544/3419835294"'
-            resValue 'string', 'app_inters', '"ca-app-pub-3940256099942544/1033173712"'
-            resValue 'string', 'app_banner', '"ca-app-pub-3940256099942544/6300978111"'
+            resValue 'string', 'app_id', '"ca-app-pub-6899742220671138~8536038017"'
+            resValue 'string', 'app_open', '"ca-app-pub-6899742220671138/1675745106"'
+            resValue 'string', 'app_inters', '"ca-app-pub-6899742220671138/6580091962"'
+            resValue 'string', 'app_banner', '"ca-app-pub-6899742220671138/4707461880"'
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
-    <external-path name="files_root" path="Android/data/com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield/" />
+    <external-path name="files_root" path="Android/data/com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection/" />
     <external-cache-path name="external_cache_storage_root" path="." />
     <cache-path name="cache_storage_root" path="." />
 </paths>

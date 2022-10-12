@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VPN Proxy</string>
+    <string name="app_name">Fastest and Secure VPN Proxy</string>
     <string name="connection_close_confirm">Would you like to cancel the current VPN Connection?</string>
     <string name="help">Faq</string>
     <string name="no">NO</string>
@@ -18,10 +18,7 @@
     <string name="drawer_faq_text">FAQs</string>
 
 
-    <string name="app_version_text" translatable="false">Version 1.0.0</string>
-    <string name="about_app_text" translatable="false">You are using VPN Proxy build v1.0.0, Enjoy unlimited bandwidth with stable connection and a lot of serverModels to choose from. No limits, No restrictions</string>
 
-    <string name="app_name_premium">VPN Proxy Premium</string>
     <string name="privacy_policy_title" translatable="false">Privacy Policy</string>
     <string name="unlimited_text">Unlimited</string>
     <string name="secure_text">Secure</string>
@@ -79,19 +76,7 @@
     <string name="rating_text_5">The best we can get :)</string>
     <!--rating dialog-->
 
-    <string-array name="faq_questions">
-        <item>Why I need a VPN?</item>
-        <item>Is it safe?</item>
-        <item>How to use VPN Proxy ?</item>
-        <item>How to disconnect VPN Proxy ?</item>
-        <item>Can\’t connect, not stable or speed is slow.</item>
-        <item>How to switch serverModel location?</item>
-        <item>Can\’t find the serverModel you want?</item>
-        <item>Why can\'t I use Internet after connection established?</item>
-        <item>How to disable battery optimization for VPN Proxy?</item>
-        <item>How to cancel the subscription in Google play?</item>
-        <item>Can I get refund?</item>
-    </string-array>
+
 
 
     <string name="disconnect_first">In order to change the serverModel, please disconnect the VPN first</string>
@@ -106,8 +91,6 @@
     <string name="facebook_interstitial_id">Your Facebook Interstitial Ad Id</string>
     <string name="facebook_native_banner_id">Your Facebook Native Banner Ad Id</string>
 
-    <string name="developers_email" translatable="false">your_developer_email</string>
-    <string name="privacy_policy_link" translatable="false">https://www.google.com</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -124,6 +107,5 @@
     <string name="Yes">Yes</string>
     <string name="No">No</string>
 
-    <!--Fields needed to be replaced by user-->
 
 </resources>

@@ -12,22 +12,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75e4c8b6-db50-4ba4-a9e1-2fb0ebe8a118" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/ChangeServerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/ChangeServerActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/HomeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/fragments/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/fragments/HomeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/main_back.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/main_back.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/server_selection_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/server_selection_bg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/ads/AdsOpenUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/ads/AdsUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/database/DbHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/database/ServerConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/database/ServerDatabase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/pojoClasses/ServerModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/pref/SharedPreference.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/recycle/EmptyRecyclerView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/utils/AppSettings.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/utils/CheckInternetConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/utils/CsvParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/utils/OvpnUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/utils/ViewUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/ChangeServerActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/HomeActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/PrivacyActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/QuitActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/activites/SplashActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/view/fragments/HomeFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_change_server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_change_server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/lalaapps/freevpn/hotspot/proxy/unlimited/secureshield/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[4ec334aa]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/ayliya/.android/avd/Pixel_4_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -66,7 +87,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="v17" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,13 +108,12 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ApkExportedModule" value="VPN_Proxy_-_Unlimited_Shield.app" />
-    <property name="BundleExportedModule" value="VPN_Proxy_Lala.app" />
+    <property name="BundleExportedModule" value="Fastest_and_Secure_VPN_Proxy.app" />
     <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -145,7 +165,7 @@
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="VPN_Proxy_Lala.app.main" />
+      <module name="Fastest_and_Secure_VPN_Proxy.app.main" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -313,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665052965006</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="initial commit">
+      <created>1665081951504</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1665081951504</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

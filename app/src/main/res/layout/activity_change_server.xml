@@ -116,7 +116,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/change_server_ad_block">
 
-        <com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.recycle.EmptyRecyclerView
+        <com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.recycle.EmptyRecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield">
+    package="com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.App"
+        android:name="com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.App"
         android:allowBackup="true"
         android:extractNativeLibs="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,25 +19,25 @@
         android:theme="@style/AppTheme"
         tools:replace="android:extractNativeLibs">
         <activity
-            android:name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.view.activites.QuitActivity"
+            android:name="com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.view.activites.QuitActivity"
             android:exported="false">
 
         </activity>
         <activity
-            android:name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.view.activites.PrivacyActivity"
+            android:name="com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.view.activites.PrivacyActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
         <activity
-            android:name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.view.activites.HomeActivity"
+            android:name="com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.view.activites.HomeActivity"
             android:exported="false"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
         <activity
-            android:name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.view.activites.SplashActivity"
+            android:name="com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.view.activites.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -47,7 +47,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.view.activites.ChangeServerActivity"
+            android:name="com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.view.activites.ChangeServerActivity"
             android:exported="false" />
         <activity
             android:name="de.blinkt.openvpn.DisconnectVPNActivity"
@@ -67,7 +67,7 @@
 
         <provider
             android:name="de.blinkt.openvpn.FileProvider"
-            android:authorities="com.lalaapps.freevpn.hotspot.proxy.unlimited.secureshield.fileprovider"
+            android:authorities="com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
