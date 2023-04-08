@@ -7,9 +7,9 @@ import android.net.NetworkInfo;
 /**
  * This class is responsible for internet status checking
  */
-public class CheckInternetConnection {
+public class NetworkConnections {
 
-    public boolean isInternetConnected(Context context){
+    public boolean isNetworkAvailable(Context context){
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo nInfo = cm.getActiveNetworkInfo();
 

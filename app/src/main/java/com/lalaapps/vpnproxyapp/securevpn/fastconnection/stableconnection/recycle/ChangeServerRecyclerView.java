@@ -22,7 +22,7 @@ import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-public class EmptyRecyclerView extends RecyclerView {
+public class ChangeServerRecyclerView extends RecyclerView {
 
     private View mEmptyView;
 
@@ -34,15 +34,15 @@ public class EmptyRecyclerView extends RecyclerView {
         }
     };
 
-    public EmptyRecyclerView(Context context) {
+    public ChangeServerRecyclerView(Context context) {
         super(context);
     }
 
-    public EmptyRecyclerView(Context context, AttributeSet attrs) {
+    public ChangeServerRecyclerView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public EmptyRecyclerView(Context context, AttributeSet attrs, int defStyle) {
+    public ChangeServerRecyclerView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 

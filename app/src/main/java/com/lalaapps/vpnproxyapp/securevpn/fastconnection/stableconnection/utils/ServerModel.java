@@ -1,4 +1,4 @@
-package com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.pojoClasses;
+package com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.database.ServerConstant.ServerEntry;
 
-import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.pojoClasses.ServerModel;
+import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils.ServerModel;
 
 import java.util.ArrayList;
 import java.util.List;

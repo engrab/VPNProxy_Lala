@@ -2,8 +2,6 @@ package com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils
 
 import android.util.Base64;
 
-import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.pojoClasses.ServerModel;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;

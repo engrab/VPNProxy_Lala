@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Fastest and Secure VPN Proxy</string>
     <string name="connection_close_confirm">Would you like to cancel the current VPN Connection?</string>
-    <string name="help">Faq</string>
     <string name="no">NO</string>
     <string name="yes">YES</string>
 
@@ -10,102 +9,91 @@
     <string name="format_speed">%s</string>
 
     <!--    Drawer Items Strings-->
-    <string name="drawer_premium_text">PREMIUM</string>
-    <string name="drawer_share_text">TELL YOUR FRIEND</string>
-    <string name="drawer_rate_text">RATE US</string>
-    <string name="drawer_about_text">ABOUT</string>
-    <string name="drawer_policy_text">PRIVACY POLICY</string>
-    <string name="drawer_faq_text">FAQs</string>
 
 
-
-    <string name="privacy_policy_title" translatable="false">Privacy Policy</string>
-    <string name="unlimited_text">Unlimited</string>
-    <string name="secure_text">Secure</string>
-    <string name="support_text">Support</string>
-    <string name="no_ads_text">No Ads</string>
     <string name="change_text">Change</string>
-    <string name="disconnect_text">Disconnect</string>
     <string name="download_text">DOWNLOAD</string>
     <string name="dummy_ip_text">222.432.00.32</string>
     <string name="dummy_time_text">00:03:32</string>
     <string name="dummy_your_ip_text">Your IP : </string>
-    <string name="go_premium_text">Go to Premium</string>
     <string name="not_connected_text">Not Connected</string>
-    <string name="start_text">START</string>
     <string name="upload_text">UPLOAD</string>
-    <string name="subscription_text">SUBSCRIPTION</string>
     <string name="status_text">Status : </string>
     <string name="select_server_text">Select Server</string>
-    <string name="rate_app_text">RATE THIS APP</string>
-    <string name="feedback_text">Feedback</string>
-    <string name="content_text">Content</string>
     <string name="zero_text">0.0</string>
     <string name="speed_text">Speed</string>
     <string name="tcp_text">TCP</string>
     <string name="ping_text">Ping</string>
-    <string name="submit_text">Submit</string>
-    <string name="you_are_connected_text">Connected</string>
-    <string name="connection_status_text">Connection Status</string>
-    <string name="zero_duration_text">Duration: 00:00:00</string>
-    <string name="packet_received_text">Packet Received:</string>
-    <string name="no_thanks_text">No Thanks</string>
-    <string name="restore_purchase_text">Restore Purchase</string>
-    <string name="byte_in_text">Bytes In: </string>
-    <string name="byte_out_text">Bytes OUT: </string>
     <string name="country_name_text">Country Name</string>
-    <string name="choose_location_text">choose your location</string>
     <string name="default_server_text">Server Default Icon</string>
-    <string name="feedback_hint_text">Suggest us what went wrong and we\'ll work on it.</string>
 
     <string name="country_name">No Server Selected</string>
     <string name="IP_address">Server IP Address</string>
 
-    <string name="one_month_text">1 Month</string>
-    <string name="three_months_text">3 Months</string>
-    <string name="one_year_text">1 Year</string>
-
-    <!--rating dialog-->
-    <string name="feedback_email_subject" translatable="false">VPN Proxy</string>
-
-    <string name="rating_promote">We are working hard for a better user experience. \nWe\'d greatly appreciate if you can rate us.</string>
-    <string name="rating_title_1">Oh, no!</string>
-    <string name="rating_title_2">We like you too!</string>
-    <string name="rating_text_1">Please leave us some feedback.</string>
-    <string name="rating_text_4">Thanks for your feedback.</string>
-    <string name="rating_text_5">The best we can get :)</string>
     <!--rating dialog-->
 
-
+    <!--rating dialog-->
 
 
     <string name="disconnect_first">In order to change the serverModel, please disconnect the VPN first</string>
-    <string name="share_app_text" translatable="false">Check this awesome free VPN. You can unblock any website and enjoy tons of free serverModel, Download now VPN Proxy</string>
-    <string name="share_msg" translatable="false">Check this awesome free VPN. You can unblock any website and enjoy tons of free serverModel, Download now VPN Proxy</string>
 
     <string name="info_dialog_title">Credits</string>
     <string name="info_dialog_details">All of these serverModels are being provided by the VPN gate project and they are offering their service free of charge. You can read more about the VPN gate project at <a href="https://www.vpngate.net/en/">https://www.vpngate.net/en/</a></string>
 
 
     <!--facebook ids-->
-    <string name="facebook_interstitial_id">Your Facebook Interstitial Ad Id</string>
-    <string name="facebook_native_banner_id">Your Facebook Native Banner Ad Id</string>
 
-    <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_privacy">Privacy Policy</string>
-    <string name="about_give_us_5_star">Rate Us</string>
-    <string name="Yes">Yes</string>
-    <string name="No">No</string>
+    <string name="privacy">When you use our Service, our policies regarding the collection, use, and disclosure of personal data, as well as your options regarding that data, are outlined on this page.
+\n\n
+We use your data to provide the Service and make it better. You consent to the collection and use of information in accordance with this policy by using the Service. Terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, unless otherwise specified.
+\n\n
+We place a high priority on maintaining your privacy. We hope that the following statement will help you understand how our app handles personal identifiable information (also known as "PII") that you may occasionally provide to us through the Internet (the Google Play Platform).
+\n\n
+When you download our Android applications, we generally do not collect any personal information from you. To be more specific, we do not require users to register before downloading the application, nor do we keep track of their visits to our application; in fact, we do not even have a server on which such personal information could be stored.
+\n\n
+        <b>Information Collection and Utilization Log Data</b>
+\n\n
+ We would like to inform you that whenever you use our Service, in the event of an error in the app, we collect data and information called Log Data from third-party apps on your phone. The IP address of your device, the name of your device, the version of your operating system, the app\'s configuration when you use our service, the time and date of your use of the service, and other statistics may be included in this log data.
+\n\n
+Cookies are small data files that are frequently used as anonymous unique identifiers. Cookies These are stored in the internal memory of your device and are sent to your browser from the websites you visit.
+\n\n
+These "cookies" are not used explicitly by this Service. On the other hand, the app might make use of libraries and third-party code that make use of "cookies" to gather data and enhance services. You are informed whenever a cookie is being sent to your device and have the option to accept or reject them. You may not be able to use some aspects of this Service if you reject our cookies.
+\n\n
+Service Providers For the following reasons, we may employ individuals and businesses of third parties:
+\n\n
+<b>• To make our Service easier</b>
+\n\n
+        <b>• To act on our behalf and provide the Service</b>
+\n\n
+        <b>• To provide services related to the service</b>
+        \n\n
+        <b>• To help us figure out how people use our Service.</b>
+\n\n
+Users of this Service should be aware that these third parties have access to your personal data. To carry out the responsibilities that have been assigned to them on our behalf. However, they are required to keep the information confidential and not use it for any other purpose.
+\n\n
+When you use our Service, we may ask for certain personally identifiable information from you to improve your experience. We will keep and use the requested data in accordance with this privacy statement.
+\n\n
+The app does make use of services provided by third parties, and these services may gather information that can be used to identify you.
+\n\n
+Link to the privacy policies of third-party service providers used by the app Security We value your trust in us and strive to use commercially acceptable means of protecting your personal information. However, keep in mind that neither electronic storage nor internet transmission is 100% secure, nor we cannot guarantee their absolute security.
+\n\n
 
+        <b>Links to Other Websites</b>
+\n\n
+This Service Might Provide Links to Other Websites You will be taken to that website if you click on a link from a third party. Please be aware that we do not control these external websites. As a result, reading these websites\' privacy policies is highly recommended. We take no responsibility for the content, privacy policies, or practices of any third-party websites or services and have no control over them.
+\n\n
+
+        <b>Privacy for Children</b>
+\n\n
+These Services are not directed at children under the age of 13. Children under the age of 13 are not knowingly collected personally identifiable information by us. If we learn that a child under the age of 13 has given us personal information, we delete it right away from our servers. If you are a parent or guardian and are aware that your child has given us personal information, please get in touch with us so that we can take the necessary steps.
+
+\n\n
+Changes to This Privacy Statement From time to time, we may update this Privacy Statement. As a result, you should check this page frequently for updates. By publishing the updated Privacy Policy on this page, we will notify you of any changes.
+
+    \n\n
+    </string>
 
 </resources>

@@ -22,11 +22,11 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils.AppSettings;
 import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.R;
-import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.pref.SharedPreference;
-import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.ads.AdsUtils;
+import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils.SharedPreference;
+import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.ads.AdmobAds;
 import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.databinding.ActivityChangeServerBinding;
 import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.database.DbHelper;
-import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.pojoClasses.ServerModel;
+import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils.ServerModel;
 import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils.CsvParser;
 import com.badoo.mobile.util.WeakHandler;
 import com.google.android.gms.ads.AdRequest;
@@ -46,7 +46,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class ChangeServerActivity extends AppCompatActivity {
+public class ServerActivity extends AppCompatActivity {
 
     private final OkHttpClient okHttpClient = new OkHttpClient();
     private final List<ServerModel> serverModels = new ArrayList<>();
@@ -94,11 +94,11 @@ public class ChangeServerActivity extends AppCompatActivity {
 
         handler = new WeakHandler();
         dbHelper = DbHelper.getInstance(getApplicationContext());
-        sharedPreference = new SharedPreference(ChangeServerActivity.this);
+        sharedPreference = new SharedPreference(ServerActivity.this);
         binding = ActivityChangeServerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        AdsUtils.loadInterstitial(this);
+        AdmobAds.loadInterstitial(this);
 
         serverModels.addAll(dbHelper.getAll());
         setupSwipeRefreshLayout();
@@ -169,7 +169,7 @@ public class ChangeServerActivity extends AppCompatActivity {
     private void setupRecyclerView() {
         adapter = new ServerAdapter(serverModels, serverClickCallback);
         RecyclerView.ItemDecoration itemDecoration = new
-                DividerItemDecoration(ChangeServerActivity.this, 0);
+                DividerItemDecoration(ServerActivity.this, 0);
         binding.recyclerview.setHasFixedSize(true);
         binding.recyclerview.addItemDecoration(itemDecoration);
         binding.recyclerview.setLayoutManager(new LinearLayoutManager(binding.recyclerview.getContext()));
@@ -237,7 +237,7 @@ public class ChangeServerActivity extends AppCompatActivity {
     private void loadAdmobBanner() {
 
 
-        adView = AdsUtils.showBannerSmall(this, binding.changeServerBannerAdmob);
+        adView = AdmobAds.showBannerSmall(this, binding.changeServerBannerAdmob);
 
     }
 

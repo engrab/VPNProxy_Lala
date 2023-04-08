@@ -23,7 +23,7 @@ import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.appopen.AppOpenAd;
 import java.util.Date;
 
-public class AdsOpenUtils implements LifecycleObserver, Application.ActivityLifecycleCallbacks{
+public class OpenAds implements LifecycleObserver, Application.ActivityLifecycleCallbacks{
     private static final String LOG_TAG = "AppOpenManager";
     private static boolean isShowingAd = false;
     private final App myApplication;
@@ -36,7 +36,7 @@ public class AdsOpenUtils implements LifecycleObserver, Application.ActivityLife
     /**
      * Constructor
      */
-    public AdsOpenUtils(App myApplication) {
+    public OpenAds(App myApplication) {
         this.myApplication = myApplication;
         this.myApplication.registerActivityLifecycleCallbacks(this);
         ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
@@ -56,7 +56,7 @@ public class AdsOpenUtils implements LifecycleObserver, Application.ActivityLife
                         @Override
                         public void onAdDismissedFullScreenContent() {
                             // Set the reference to null so isAdAvailable() returns false.
-                            AdsOpenUtils.this.appOpenAd = null;
+                            OpenAds.this.appOpenAd = null;
                             isShowingAd = false;
                             fetchAd();
                         }
@@ -105,8 +105,8 @@ public class AdsOpenUtils implements LifecycleObserver, Application.ActivityLife
                     @Override
                     public void onAdLoaded(@NonNull AppOpenAd appOpenAd) {
                         super.onAdLoaded(appOpenAd);
-                        AdsOpenUtils.this.appOpenAd = appOpenAd;
-                        AdsOpenUtils.this.loadTime = (new Date()).getTime();
+                        OpenAds.this.appOpenAd = appOpenAd;
+                        OpenAds.this.loadTime = (new Date()).getTime();
                     }
 
                     @Override

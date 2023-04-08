@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/ic_bg"
-    tools:context=".view.activites.ChangeServerActivity">
+    tools:context=".view.activites.ServerActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/toolbar_servers"
@@ -116,7 +116,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/change_server_ad_block">
 
-        <com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.recycle.EmptyRecyclerView
+        <com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.recycle.ChangeServerRecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

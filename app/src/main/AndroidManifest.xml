@@ -19,25 +19,24 @@
         android:theme="@style/AppTheme"
         tools:replace="android:extractNativeLibs">
         <activity
-            android:name="com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.view.activites.QuitActivity"
+            android:name=".view.activites.PrivacyActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".view.activites.HomeActivity"
             android:exported="false">
-
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
-        <activity
-            android:name="com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.view.activites.PrivacyActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme.NoActionBar">
 
-        </activity>
-        <activity
-            android:name="com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.view.activites.HomeActivity"
-            android:exported="false"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar">
 
-        </activity>
         <activity
-            android:name="com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.view.activites.SplashActivity"
+            android:name=".view.activites.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -47,7 +46,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.view.activites.ChangeServerActivity"
+            android:name=".view.activites.ServerActivity"
             android:exported="false" />
         <activity
             android:name="de.blinkt.openvpn.DisconnectVPNActivity"

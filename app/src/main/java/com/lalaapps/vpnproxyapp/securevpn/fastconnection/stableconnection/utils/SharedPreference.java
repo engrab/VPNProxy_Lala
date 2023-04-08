@@ -1,9 +1,9 @@
-package com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.pref;
+package com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.pojoClasses.ServerModel;
+import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils.ServerModel;
 
 public class SharedPreference {
 

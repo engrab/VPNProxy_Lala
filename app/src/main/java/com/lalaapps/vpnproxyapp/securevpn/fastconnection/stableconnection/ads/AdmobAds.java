@@ -15,7 +15,7 @@ import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
-public class AdsUtils {
+public class AdmobAds {
 
     public static InterstitialAd mInterstitialAd;
     public static InterstitialAd getInterstitial() {

@@ -17,15 +17,15 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils.AppSettings
-import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils.CheckInternetConnection
+import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils.NetworkConnections
 import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.R
-import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.pref.SharedPreference
-import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.ads.AdsUtils
-import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.ads.AdsUtils.loadInterstitial
+import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils.SharedPreference
+import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.ads.AdmobAds
+import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.ads.AdmobAds.loadInterstitial
 import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.databinding.FragmentHomeBinding
-import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.pojoClasses.ServerModel
+import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils.ServerModel
 import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.utils.toast
-import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.view.activites.ChangeServerActivity
+import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.view.activites.ServerActivity
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
@@ -42,7 +42,7 @@ class HomeFragment : Fragment() {
     private lateinit var mContext: Context
 
     private var binding: FragmentHomeBinding? = null
-    private var connection: CheckInternetConnection? = null
+    private var connection: NetworkConnections? = null
     private var vpnStart = false
 
     private lateinit var globalServerModel: ServerModel
@@ -89,7 +89,7 @@ class HomeFragment : Fragment() {
         vpnThread = OpenVPNThread()
         vpnService = OpenVPNService()
         connection =
-            CheckInternetConnection()
+            NetworkConnections()
         sharedPreference =
             SharedPreference(
                 mContext
@@ -114,12 +114,12 @@ class HomeFragment : Fragment() {
         VpnStatus.initLogCache(mContext.cacheDir)
 
 
-        AdsUtils.showBannerSmall(mContext, binding!!.llAds)
+        AdmobAds.showBannerSmall(mContext, binding!!.llAds)
 
         binding!!.serverSelectionBlock.setOnClickListener {
             if (!vpnStart) {
                 getServerResult.launch(
-                    Intent(mContext, ChangeServerActivity::class.java)
+                    Intent(mContext, ServerActivity::class.java)
                 )
             } else {
                 mContext.toast(resources.getString(R.string.disconnect_first))
@@ -134,7 +134,7 @@ class HomeFragment : Fragment() {
                 prepareVpn()
             } else if (!isServerSelected && !vpnStart) {
                 getServerResult.launch(
-                    Intent(mContext, ChangeServerActivity::class.java)
+                    Intent(mContext, ServerActivity::class.java)
                 )
             } else if (vpnStart && !isServerSelected) {
                 mContext.toast(resources.getString(R.string.disconnect_first))
@@ -166,7 +166,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun getInternetStatus(): Boolean {
-        return connection!!.isInternetConnected(mContext)
+        return connection!!.isNetworkAvailable(mContext)
     }
 
     fun setStatus(connectionState: String?) {

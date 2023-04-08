@@ -8,8 +8,6 @@ import android.os.Environment;
 
 import androidx.annotation.NonNull;
 
-import com.lalaapps.vpnproxyapp.securevpn.fastconnection.stableconnection.pojoClasses.ServerModel;
-
 import java.io.File;
 import java.io.FileOutputStream;
 
